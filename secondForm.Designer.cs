@@ -1,6 +1,6 @@
 ﻿namespace VCOPresets
 {
-    partial class AddWeapon
+    partial class secondForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWeapon));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(secondForm));
             valueName = new TextBox();
             SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             valueName.TabIndex = 0;
             valueName.KeyDown += valueName_KeyDown;
             // 
-            // AddWeapon
+            // secondForm
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -54,9 +54,9 @@
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "AddWeapon";
+            Name = "secondForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Add new weapon";
+            Text = "Placeholder";
             Load += AddWeapon_Load;
             KeyDown += AddWeapon_KeyDown;
             ResumeLayout(false);

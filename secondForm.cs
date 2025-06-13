@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace VCOPresets
 {
-    public partial class AddWeapon : Form
+    public partial class secondForm : Form
     {
         private readonly string[] _existingWeapons;
-        public string WeaponName
+        public string providedName
         {
             get { return valueName.Text.Trim(); }
         }
 
-        public AddWeapon(string[] existingWeapons)
+        public secondForm(string[] existingWeapons)
         {
             InitializeComponent();
             _existingWeapons = existingWeapons;

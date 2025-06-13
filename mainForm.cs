@@ -8,8 +8,8 @@ namespace VCOPresets
         // D:\SPT Iterations\SPT 3.11\BepInEx\plugins\hazelify.VCO
         // Environment.CurrentDirectory
         public string currentEnv = "D:\\SPT Iterations\\SPT 3.11\\BepInEx\\plugins\\hazelify.VCO";
-        public string weaponsPath = Path.Join(Environment.CurrentDirectory, "weapons.cfg");
-        public string presetsJSON = Path.Join(Environment.CurrentDirectory, "presets.json");
+        public string? weaponsPath = null;
+        public string? presetsJSON = null;
 
         public mainForm()
         {
@@ -18,6 +18,8 @@ namespace VCOPresets
 
         private void mainForm_Load(object sender, EventArgs e)
         {
+            weaponsPath = Path.Join(currentEnv, "weapons.cfg");
+            presetsJSON = Path.Join(currentEnv, "presets.json");
             initConfigs();
         }
 
@@ -183,7 +185,7 @@ namespace VCOPresets
                 valueY.Clear();
                 valueZ.Clear();
 
-                var preset = PresetManager.GetPresetByName(selectedPreset);
+                var preset = PresetManager.GetPresetByName(selectedPreset, currentEnv);
                 if (preset != null)
                 {
                     valuePreset.Text = preset.Name;
@@ -251,15 +253,16 @@ namespace VCOPresets
         private void btnAddWeapon_Click(object sender, EventArgs e)
         {
             string[] weapons = listWeapons.Items.Cast<string>().ToArray();
-            using (var addWeaponForm = new AddWeapon(weapons))
+            using (var newForm = new secondForm(weapons))
             {
-                if (addWeaponForm.ShowDialog() == DialogResult.OK)
+                newForm.Text = "Add new weapon";
+                if (newForm.ShowDialog() == DialogResult.OK)
                 {
-                    string weaponName = addWeaponForm.WeaponName;
+                    string weaponName = newForm.providedName;
                     if (!string.IsNullOrWhiteSpace(weaponName))
                     {
                         listWeapons.Items.Add(weaponName);
-                        // File.AppendAllText(weaponsPath, weaponName + Environment.NewLine);
+                        File.AppendAllText(weaponsPath, weaponName + Environment.NewLine);
                     }
                 }
             }
@@ -302,12 +305,76 @@ namespace VCOPresets
 
         private void btnAddPreset_Click(object sender, EventArgs e)
         {
+            string[] presets = listPresets.Items.Cast<string>().ToArray();
 
+            using (var newForm = new secondForm(presets))
+            {
+                newForm.Text = "Add new preset";
+
+                if (newForm.ShowDialog() == DialogResult.OK)
+                {
+                    string presetName = newForm.providedName;
+                    if (!string.IsNullOrWhiteSpace(presetName))
+                    {
+                        listPresets.Items.Clear();
+
+                        var newPreset = new Preset
+                        {
+                            Name = presetName,
+                            X = 0.4,
+                            Y = 0.4,
+                            Z = 0.4
+                        };
+
+                        if (PresetManager.SavePreset(newPreset, currentEnv))
+                        {
+                            checkPresetsConfig();
+                            loadPresets();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to save " + presetName + " to file, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
         }
 
         private void btnRemoveCurrentPreset_Click(object sender, EventArgs e)
         {
+            if (listPresets.SelectedIndex < 0)
+            {
+                return;
+            }
 
+            if (listPresets.SelectedItem == null)
+            {
+                return;
+            }
+
+            if (string.IsNullOrEmpty(listPresets.SelectedItem.ToString()))
+            {
+                return;
+            }
+
+            string? presetName = listPresets.SelectedItem.ToString();
+            if (string.IsNullOrWhiteSpace(presetName))
+            {
+                return;
+            }
+
+            if (MessageBox.Show($"Remove " + presetName + "?", "Preset management", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (PresetManager.RemovePreset(presetName, currentEnv))
+                {
+                    checkPresetsConfig();
+                    loadPresets();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to remove preset.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
