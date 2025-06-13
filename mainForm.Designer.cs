@@ -41,7 +41,7 @@
             containerWeapons = new GroupBox();
             listWeapons = new ListBox();
             btnAddWeapon = new Button();
-            btnRemovePreset = new Button();
+            btnRemoveWeapon = new Button();
             btnClearWeaponList = new Button();
             containerPresets = new GroupBox();
             listPresets = new ListBox();
@@ -59,6 +59,7 @@
             valueY = new TextBox();
             displayOffsetX = new Label();
             valueX = new TextBox();
+            btnRegenWeapons = new Button();
             topPanel.SuspendLayout();
             topPanelContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconBox).BeginInit();
@@ -69,338 +70,231 @@
             // 
             // topPanel
             // 
-            topPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            resources.ApplyResources(topPanel, "topPanel");
             topPanel.Controls.Add(topPanelContent);
             topPanel.Controls.Add(separator3);
             topPanel.Controls.Add(separator1);
             topPanel.Controls.Add(iconBox);
-            topPanel.Location = new Point(0, 0);
-            topPanel.Margin = new Padding(3, 4, 3, 4);
             topPanel.Name = "topPanel";
-            topPanel.Size = new Size(844, 98);
-            topPanel.TabIndex = 0;
             // 
             // topPanelContent
             // 
-            topPanelContent.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            resources.ApplyResources(topPanelContent, "topPanelContent");
             topPanelContent.Controls.Add(mainLink);
             topPanelContent.Controls.Add(mainVersion);
             topPanelContent.Controls.Add(mainTitle);
-            topPanelContent.Location = new Point(90, 4);
-            topPanelContent.Margin = new Padding(3, 4, 3, 4);
             topPanelContent.Name = "topPanelContent";
-            topPanelContent.Size = new Size(717, 90);
-            topPanelContent.TabIndex = 3;
             // 
             // mainLink
             // 
-            mainLink.Font = new Font("Bahnschrift", 12F);
+            resources.ApplyResources(mainLink, "mainLink");
             mainLink.ForeColor = SystemColors.ControlText;
-            mainLink.Location = new Point(60, 48);
             mainLink.Name = "mainLink";
-            mainLink.Size = new Size(549, 20);
-            mainLink.TabIndex = 2;
-            mainLink.Text = "Visit the VCO modpage (click to open in browser)";
-            mainLink.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // mainVersion
             // 
-            mainVersion.Font = new Font("Bahnschrift", 12F);
+            resources.ApplyResources(mainVersion, "mainVersion");
             mainVersion.ForeColor = Color.DodgerBlue;
-            mainVersion.Location = new Point(3, 48);
             mainVersion.Name = "mainVersion";
-            mainVersion.Size = new Size(54, 20);
-            mainVersion.TabIndex = 1;
-            mainVersion.Text = "1.0.4";
-            mainVersion.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // mainTitle
             // 
-            mainTitle.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            mainTitle.Font = new Font("Bahnschrift Light", 16F);
-            mainTitle.Location = new Point(3, 5);
+            resources.ApplyResources(mainTitle, "mainTitle");
             mainTitle.Name = "mainTitle";
-            mainTitle.Size = new Size(711, 40);
-            mainTitle.TabIndex = 0;
-            mainTitle.Text = "VCO - Presets Configurator";
-            mainTitle.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // separator3
             // 
-            separator3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            separator3.Location = new Point(826, 0);
-            separator3.Margin = new Padding(3, 4, 3, 4);
+            resources.ApplyResources(separator3, "separator3");
             separator3.Name = "separator3";
-            separator3.Size = new Size(18, 98);
-            separator3.TabIndex = 2;
             // 
             // separator1
             // 
-            separator1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            separator1.Location = new Point(0, 0);
-            separator1.Margin = new Padding(3, 4, 3, 4);
+            resources.ApplyResources(separator1, "separator1");
             separator1.Name = "separator1";
-            separator1.Size = new Size(18, 98);
-            separator1.TabIndex = 1;
             // 
             // iconBox
             // 
             iconBox.Image = Properties.Resources._2754_ezgif_com_webp_to_png_converter;
-            iconBox.Location = new Point(24, 19);
-            iconBox.Margin = new Padding(3, 4, 3, 4);
+            resources.ApplyResources(iconBox, "iconBox");
             iconBox.Name = "iconBox";
-            iconBox.Size = new Size(60, 60);
-            iconBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            iconBox.TabIndex = 1;
             iconBox.TabStop = false;
             // 
             // mainSeparator1
             // 
-            mainSeparator1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            mainSeparator1.Location = new Point(0, 97);
+            resources.ApplyResources(mainSeparator1, "mainSeparator1");
             mainSeparator1.Name = "mainSeparator1";
-            mainSeparator1.Size = new Size(844, 10);
-            mainSeparator1.TabIndex = 1;
             mainSeparator1.Paint += mainSeparator1_Paint;
             // 
             // containerWeapons
             // 
-            containerWeapons.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            resources.ApplyResources(containerWeapons, "containerWeapons");
             containerWeapons.Controls.Add(listWeapons);
-            containerWeapons.Location = new Point(12, 122);
             containerWeapons.Name = "containerWeapons";
-            containerWeapons.Size = new Size(249, 306);
-            containerWeapons.TabIndex = 2;
             containerWeapons.TabStop = false;
-            containerWeapons.Text = "Weapon detection list";
             // 
             // listWeapons
             // 
-            listWeapons.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            resources.ApplyResources(listWeapons, "listWeapons");
             listWeapons.FormattingEnabled = true;
-            listWeapons.ItemHeight = 18;
-            listWeapons.Location = new Point(6, 24);
             listWeapons.Name = "listWeapons";
-            listWeapons.Size = new Size(237, 274);
-            listWeapons.TabIndex = 0;
             // 
             // btnAddWeapon
             // 
-            btnAddWeapon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            resources.ApplyResources(btnAddWeapon, "btnAddWeapon");
             btnAddWeapon.Cursor = Cursors.Hand;
-            btnAddWeapon.Location = new Point(267, 130);
             btnAddWeapon.Name = "btnAddWeapon";
-            btnAddWeapon.Size = new Size(35, 35);
-            btnAddWeapon.TabIndex = 3;
-            btnAddWeapon.Text = "➕";
             btnAddWeapon.UseVisualStyleBackColor = true;
+            btnAddWeapon.Click += btnAddWeapon_Click;
             // 
-            // btnRemovePreset
+            // btnRemoveWeapon
             // 
-            btnRemovePreset.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnRemovePreset.Cursor = Cursors.Hand;
-            btnRemovePreset.Location = new Point(267, 171);
-            btnRemovePreset.Name = "btnRemovePreset";
-            btnRemovePreset.Size = new Size(35, 35);
-            btnRemovePreset.TabIndex = 4;
-            btnRemovePreset.Text = "➖";
-            btnRemovePreset.UseVisualStyleBackColor = true;
+            resources.ApplyResources(btnRemoveWeapon, "btnRemoveWeapon");
+            btnRemoveWeapon.Cursor = Cursors.Hand;
+            btnRemoveWeapon.Name = "btnRemoveWeapon";
+            btnRemoveWeapon.UseVisualStyleBackColor = true;
+            btnRemoveWeapon.Click += btnRemovePreset_Click;
             // 
             // btnClearWeaponList
             // 
-            btnClearWeaponList.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            resources.ApplyResources(btnClearWeaponList, "btnClearWeaponList");
             btnClearWeaponList.Cursor = Cursors.Hand;
-            btnClearWeaponList.Location = new Point(267, 393);
             btnClearWeaponList.Name = "btnClearWeaponList";
-            btnClearWeaponList.Size = new Size(35, 35);
-            btnClearWeaponList.TabIndex = 5;
-            btnClearWeaponList.Text = "🗑";
             btnClearWeaponList.UseVisualStyleBackColor = true;
+            btnClearWeaponList.Click += btnClearWeaponList_Click;
             // 
             // containerPresets
             // 
-            containerPresets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            resources.ApplyResources(containerPresets, "containerPresets");
             containerPresets.Controls.Add(listPresets);
-            containerPresets.Location = new Point(335, 122);
             containerPresets.Name = "containerPresets";
-            containerPresets.Size = new Size(249, 306);
-            containerPresets.TabIndex = 6;
             containerPresets.TabStop = false;
-            containerPresets.Text = "Presets management";
             // 
             // listPresets
             // 
-            listPresets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            resources.ApplyResources(listPresets, "listPresets");
             listPresets.FormattingEnabled = true;
-            listPresets.ItemHeight = 18;
-            listPresets.Location = new Point(6, 24);
             listPresets.Name = "listPresets";
-            listPresets.Size = new Size(237, 274);
-            listPresets.TabIndex = 0;
+            listPresets.SelectedIndexChanged += listPresets_SelectedIndexChanged;
             // 
             // btnRemoveCurrentPreset
             // 
-            btnRemoveCurrentPreset.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            resources.ApplyResources(btnRemoveCurrentPreset, "btnRemoveCurrentPreset");
             btnRemoveCurrentPreset.Cursor = Cursors.Hand;
-            btnRemoveCurrentPreset.Location = new Point(103, 280);
             btnRemoveCurrentPreset.Name = "btnRemoveCurrentPreset";
-            btnRemoveCurrentPreset.Size = new Size(35, 35);
-            btnRemoveCurrentPreset.TabIndex = 8;
-            btnRemoveCurrentPreset.Text = "➖";
             btnRemoveCurrentPreset.UseVisualStyleBackColor = true;
+            btnRemoveCurrentPreset.Click += btnRemoveCurrentPreset_Click;
             // 
             // btnAddPreset
             // 
-            btnAddPreset.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            resources.ApplyResources(btnAddPreset, "btnAddPreset");
             btnAddPreset.Cursor = Cursors.Hand;
-            btnAddPreset.Location = new Point(590, 130);
             btnAddPreset.Name = "btnAddPreset";
-            btnAddPreset.Size = new Size(35, 35);
-            btnAddPreset.TabIndex = 7;
-            btnAddPreset.Text = "➕";
             btnAddPreset.UseVisualStyleBackColor = true;
+            btnAddPreset.Click += btnAddPreset_Click;
             // 
             // btnClearPresetList
             // 
-            btnClearPresetList.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            resources.ApplyResources(btnClearPresetList, "btnClearPresetList");
             btnClearPresetList.Cursor = Cursors.Hand;
-            btnClearPresetList.Location = new Point(590, 393);
             btnClearPresetList.Name = "btnClearPresetList";
-            btnClearPresetList.Size = new Size(35, 35);
-            btnClearPresetList.TabIndex = 9;
-            btnClearPresetList.Text = "🗑";
             btnClearPresetList.UseVisualStyleBackColor = true;
+            btnClearPresetList.Click += btnClearPresetList_Click;
             // 
             // separator4
             // 
-            separator4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            separator4.Location = new Point(631, 131);
+            resources.ApplyResources(separator4, "separator4");
             separator4.Name = "separator4";
-            separator4.Size = new Size(10, 297);
-            separator4.TabIndex = 10;
             separator4.Paint += separator4_Paint;
             // 
             // mainPanelContent
             // 
-            mainPanelContent.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            resources.ApplyResources(mainPanelContent, "mainPanelContent");
             mainPanelContent.Controls.Add(btnSavePresetConfiguration);
             mainPanelContent.Controls.Add(displayPreset);
             mainPanelContent.Controls.Add(valuePreset);
-            mainPanelContent.Controls.Add(btnRemoveCurrentPreset);
             mainPanelContent.Controls.Add(displayOffsetZ);
             mainPanelContent.Controls.Add(valueZ);
             mainPanelContent.Controls.Add(displayOffsetY);
             mainPanelContent.Controls.Add(valueY);
             mainPanelContent.Controls.Add(displayOffsetX);
             mainPanelContent.Controls.Add(valueX);
-            mainPanelContent.Location = new Point(647, 113);
             mainPanelContent.Name = "mainPanelContent";
-            mainPanelContent.Size = new Size(185, 315);
-            mainPanelContent.TabIndex = 11;
             // 
             // btnSavePresetConfiguration
             // 
-            btnSavePresetConfiguration.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            resources.ApplyResources(btnSavePresetConfiguration, "btnSavePresetConfiguration");
             btnSavePresetConfiguration.Cursor = Cursors.Hand;
-            btnSavePresetConfiguration.Location = new Point(144, 280);
             btnSavePresetConfiguration.Name = "btnSavePresetConfiguration";
-            btnSavePresetConfiguration.Size = new Size(38, 35);
-            btnSavePresetConfiguration.TabIndex = 8;
-            btnSavePresetConfiguration.Text = "💾";
             btnSavePresetConfiguration.UseVisualStyleBackColor = true;
             // 
             // displayPreset
             // 
-            displayPreset.Location = new Point(3, 12);
+            resources.ApplyResources(displayPreset, "displayPreset");
             displayPreset.Name = "displayPreset";
-            displayPreset.Size = new Size(179, 25);
-            displayPreset.TabIndex = 7;
-            displayPreset.Text = "Preset";
-            displayPreset.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // valuePreset
             // 
-            valuePreset.Font = new Font("Bahnschrift Light", 14F);
-            valuePreset.Location = new Point(3, 40);
+            resources.ApplyResources(valuePreset, "valuePreset");
             valuePreset.Name = "valuePreset";
             valuePreset.ReadOnly = true;
-            valuePreset.Size = new Size(179, 30);
-            valuePreset.TabIndex = 6;
             // 
             // displayOffsetZ
             // 
-            displayOffsetZ.Location = new Point(3, 195);
+            resources.ApplyResources(displayOffsetZ, "displayOffsetZ");
             displayOffsetZ.Name = "displayOffsetZ";
-            displayOffsetZ.Size = new Size(179, 25);
-            displayOffsetZ.TabIndex = 5;
-            displayOffsetZ.Text = "Z Offset";
-            displayOffsetZ.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // valueZ
             // 
-            valueZ.Font = new Font("Bahnschrift Light", 14F);
-            valueZ.Location = new Point(3, 223);
+            resources.ApplyResources(valueZ, "valueZ");
             valueZ.Name = "valueZ";
-            valueZ.Size = new Size(179, 30);
-            valueZ.TabIndex = 4;
             // 
             // displayOffsetY
             // 
-            displayOffsetY.Location = new Point(3, 134);
+            resources.ApplyResources(displayOffsetY, "displayOffsetY");
             displayOffsetY.Name = "displayOffsetY";
-            displayOffsetY.Size = new Size(179, 25);
-            displayOffsetY.TabIndex = 3;
-            displayOffsetY.Text = "Y Offset";
-            displayOffsetY.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // valueY
             // 
-            valueY.Font = new Font("Bahnschrift Light", 14F);
-            valueY.Location = new Point(3, 162);
+            resources.ApplyResources(valueY, "valueY");
             valueY.Name = "valueY";
-            valueY.Size = new Size(179, 30);
-            valueY.TabIndex = 2;
             // 
             // displayOffsetX
             // 
-            displayOffsetX.Location = new Point(3, 73);
+            resources.ApplyResources(displayOffsetX, "displayOffsetX");
             displayOffsetX.Name = "displayOffsetX";
-            displayOffsetX.Size = new Size(179, 25);
-            displayOffsetX.TabIndex = 1;
-            displayOffsetX.Text = "X Offset";
-            displayOffsetX.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // valueX
             // 
-            valueX.Font = new Font("Bahnschrift Light", 14F);
-            valueX.Location = new Point(3, 101);
+            resources.ApplyResources(valueX, "valueX");
             valueX.Name = "valueX";
-            valueX.Size = new Size(179, 30);
-            valueX.TabIndex = 0;
+            // 
+            // btnRegenWeapons
+            // 
+            resources.ApplyResources(btnRegenWeapons, "btnRegenWeapons");
+            btnRegenWeapons.Cursor = Cursors.Hand;
+            btnRegenWeapons.Name = "btnRegenWeapons";
+            btnRegenWeapons.UseVisualStyleBackColor = true;
+            btnRegenWeapons.Click += btnRegenWeapons_Click;
             // 
             // mainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 18F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(844, 440);
+            Controls.Add(btnRegenWeapons);
             Controls.Add(mainPanelContent);
             Controls.Add(separator4);
+            Controls.Add(btnRemoveCurrentPreset);
             Controls.Add(btnClearPresetList);
             Controls.Add(btnAddPreset);
             Controls.Add(containerPresets);
             Controls.Add(btnClearWeaponList);
-            Controls.Add(btnRemovePreset);
+            Controls.Add(btnRemoveWeapon);
             Controls.Add(btnAddWeapon);
             Controls.Add(containerWeapons);
             Controls.Add(mainSeparator1);
             Controls.Add(topPanel);
-            Font = new Font("Bahnschrift Light", 11F);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(860, 479);
+            KeyPreview = true;
             Name = "mainForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Presets Configurator";
             Load += mainForm_Load;
             topPanel.ResumeLayout(false);
             topPanelContent.ResumeLayout(false);
@@ -414,35 +308,36 @@
 
         #endregion
 
-        private Panel topPanel;
-        private PictureBox iconBox;
-        private Panel separator3;
-        private Panel separator1;
-        private Panel topPanelContent;
-        private Label mainTitle;
-        private Label mainVersion;
-        private Panel mainSeparator1;
-        private Label mainLink;
-        private GroupBox containerWeapons;
-        private ListBox listWeapons;
-        private Button btnAddWeapon;
-        private Button btnRemovePreset;
-        private Button btnClearWeaponList;
-        private GroupBox containerPresets;
-        private ListBox listPresets;
-        private Button btnRemoveCurrentPreset;
-        private Button btnAddPreset;
-        private Button btnClearPresetList;
-        private Panel separator4;
-        private Panel mainPanelContent;
-        private TextBox valueX;
-        private Label displayOffsetX;
-        private Label displayOffsetZ;
-        private TextBox valueZ;
-        private Label displayOffsetY;
-        private TextBox valueY;
-        private Button btnSavePresetConfiguration;
-        private Label displayPreset;
-        private TextBox valuePreset;
+        public Panel topPanel;
+        public PictureBox iconBox;
+        public Panel separator3;
+        public Panel separator1;
+        public Panel topPanelContent;
+        public Label mainTitle;
+        public Label mainVersion;
+        public Panel mainSeparator1;
+        public Label mainLink;
+        public GroupBox containerWeapons;
+        public ListBox listWeapons;
+        public Button btnAddWeapon;
+        public Button btnRemoveWeapon;
+        public Button btnClearWeaponList;
+        public GroupBox containerPresets;
+        public ListBox listPresets;
+        public Button btnRemoveCurrentPreset;
+        public Button btnAddPreset;
+        public Button btnClearPresetList;
+        public Panel separator4;
+        public Panel mainPanelContent;
+        public TextBox valueX;
+        public Label displayOffsetX;
+        public Label displayOffsetZ;
+        public TextBox valueZ;
+        public Label displayOffsetY;
+        public TextBox valueY;
+        public Button btnSavePresetConfiguration;
+        public Label displayPreset;
+        public TextBox valuePreset;
+        public Button btnRegenWeapons;
     }
 }
