@@ -365,15 +365,65 @@ namespace VCOPresets
 
             if (MessageBox.Show($"Remove " + presetName + "?", "Preset management", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (PresetManager.RemovePreset(presetName, currentEnv))
+                try
                 {
-                    checkPresetsConfig();
-                    loadPresets();
+                    if (PresetManager.RemovePreset(presetName, currentEnv))
+                    {
+                        checkPresetsConfig();
+                        loadPresets();
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Failed to remove preset.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Failed to remove " + presetName + ":" +
+                        Environment.NewLine +
+                        Environment.NewLine +
+                        ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void listPresets_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void valueX_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void valueY_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void valueZ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
             }
         }
     }

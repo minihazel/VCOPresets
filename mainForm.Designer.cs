@@ -175,6 +175,7 @@
             listPresets.FormattingEnabled = true;
             listPresets.Name = "listPresets";
             listPresets.SelectedIndexChanged += listPresets_SelectedIndexChanged;
+            listPresets.MouseDown += listPresets_MouseDown;
             // 
             // btnRemoveCurrentPreset
             // 
@@ -247,6 +248,7 @@
             // 
             resources.ApplyResources(valueZ, "valueZ");
             valueZ.Name = "valueZ";
+            valueZ.KeyPress += valueZ_KeyPress;
             // 
             // displayOffsetY
             // 
@@ -257,6 +259,7 @@
             // 
             resources.ApplyResources(valueY, "valueY");
             valueY.Name = "valueY";
+            valueY.KeyPress += valueY_KeyPress;
             // 
             // displayOffsetX
             // 
@@ -267,6 +270,7 @@
             // 
             resources.ApplyResources(valueX, "valueX");
             valueX.Name = "valueX";
+            valueX.KeyPress += valueX_KeyPress;
             // 
             // btnRegenWeapons
             // 

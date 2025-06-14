@@ -760,135 +760,6 @@
   <data name="mainPanelContent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
   </data>
-  <data name="&gt;&gt;btnSavePresetConfiguration.Name" xml:space="preserve">
-    <value>btnSavePresetConfiguration</value>
-  </data>
-  <data name="&gt;&gt;btnSavePresetConfiguration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSavePresetConfiguration.Parent" xml:space="preserve">
-    <value>mainPanelContent</value>
-  </data>
-  <data name="&gt;&gt;btnSavePresetConfiguration.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;displayPreset.Name" xml:space="preserve">
-    <value>displayPreset</value>
-  </data>
-  <data name="&gt;&gt;displayPreset.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;displayPreset.Parent" xml:space="preserve">
-    <value>mainPanelContent</value>
-  </data>
-  <data name="&gt;&gt;displayPreset.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;valuePreset.Name" xml:space="preserve">
-    <value>valuePreset</value>
-  </data>
-  <data name="&gt;&gt;valuePreset.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;valuePreset.Parent" xml:space="preserve">
-    <value>mainPanelContent</value>
-  </data>
-  <data name="&gt;&gt;valuePreset.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetZ.Name" xml:space="preserve">
-    <value>displayOffsetZ</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetZ.Parent" xml:space="preserve">
-    <value>mainPanelContent</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetZ.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;valueZ.Name" xml:space="preserve">
-    <value>valueZ</value>
-  </data>
-  <data name="&gt;&gt;valueZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;valueZ.Parent" xml:space="preserve">
-    <value>mainPanelContent</value>
-  </data>
-  <data name="&gt;&gt;valueZ.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetY.Name" xml:space="preserve">
-    <value>displayOffsetY</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetY.Parent" xml:space="preserve">
-    <value>mainPanelContent</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetY.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;valueY.Name" xml:space="preserve">
-    <value>valueY</value>
-  </data>
-  <data name="&gt;&gt;valueY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;valueY.Parent" xml:space="preserve">
-    <value>mainPanelContent</value>
-  </data>
-  <data name="&gt;&gt;valueY.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetX.Name" xml:space="preserve">
-    <value>displayOffsetX</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetX.Parent" xml:space="preserve">
-    <value>mainPanelContent</value>
-  </data>
-  <data name="&gt;&gt;displayOffsetX.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;valueX.Name" xml:space="preserve">
-    <value>valueX</value>
-  </data>
-  <data name="&gt;&gt;valueX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;valueX.Parent" xml:space="preserve">
-    <value>mainPanelContent</value>
-  </data>
-  <data name="&gt;&gt;valueX.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="mainPanelContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>647, 113</value>
-  </data>
-  <data name="mainPanelContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 315</value>
-  </data>
-  <data name="mainPanelContent.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;mainPanelContent.Name" xml:space="preserve">
-    <value>mainPanelContent</value>
-  </data>
-  <data name="&gt;&gt;mainPanelContent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mainPanelContent.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;mainPanelContent.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="btnSavePresetConfiguration.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -950,13 +821,13 @@
     <value>1</value>
   </data>
   <data name="valuePreset.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Light, 14pt</value>
+    <value>Bahnschrift Light, 12pt</value>
   </data>
   <data name="valuePreset.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 40</value>
   </data>
   <data name="valuePreset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 30</value>
+    <value>179, 27</value>
   </data>
   <data name="valuePreset.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1004,13 +875,13 @@
     <value>3</value>
   </data>
   <data name="valueZ.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Light, 14pt</value>
+    <value>Bahnschrift Light, 12pt</value>
   </data>
   <data name="valueZ.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 223</value>
   </data>
   <data name="valueZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 30</value>
+    <value>179, 27</value>
   </data>
   <data name="valueZ.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1058,13 +929,13 @@
     <value>5</value>
   </data>
   <data name="valueY.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Light, 14pt</value>
+    <value>Bahnschrift Light, 12pt</value>
   </data>
   <data name="valueY.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 162</value>
   </data>
   <data name="valueY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 30</value>
+    <value>179, 27</value>
   </data>
   <data name="valueY.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1112,13 +983,13 @@
     <value>7</value>
   </data>
   <data name="valueX.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Light, 14pt</value>
+    <value>Bahnschrift Light, 12pt</value>
   </data>
   <data name="valueX.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 101</value>
   </data>
   <data name="valueX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 30</value>
+    <value>179, 27</value>
   </data>
   <data name="valueX.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1134,6 +1005,27 @@
   </data>
   <data name="&gt;&gt;valueX.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="mainPanelContent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>647, 113</value>
+  </data>
+  <data name="mainPanelContent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 315</value>
+  </data>
+  <data name="mainPanelContent.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;mainPanelContent.Name" xml:space="preserve">
+    <value>mainPanelContent</value>
+  </data>
+  <data name="&gt;&gt;mainPanelContent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainPanelContent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainPanelContent.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btnRegenWeapons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
